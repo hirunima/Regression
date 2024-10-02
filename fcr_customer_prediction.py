@@ -76,7 +76,7 @@ def build_timeseries(mat, y_col_index):
 
 stime = time.time()
 print(os.listdir(INPUT_PATH))
-df_ge = pd.read_csv(os.path.join(INPUT_PATH, "FCR_hourly_call_volume.csv"), engine='python')
+df_ge = pd.read_csv(os.path.join(INPUT_PATH, "data.csv"), engine='python')
 print(df_ge.shape)
 print(df_ge.columns)
 print(df_ge.head(5))
