@@ -60,7 +60,7 @@ object RandomForestClassifierExample {
 //      "September: integer,October: integer,November: integer,December: integer")
       .option("header", "true")
 //      .schema(customSchema)
-      .load("data/mllib/working.csv")
+      .load("data_current.csv")
       .select("EMP No","Gender","DOJ","Contract/Permanent","Reporting Line",
         "AHT","Attendance","Quality","CSAT","DSAT", "January","February","March",
         "April","May","June","July","August", "September","October","November","December")
@@ -73,7 +73,7 @@ object RandomForestClassifierExample {
       //      "September: integer,October: integer,November: integer,December: integer")
       .option("header", "true")
       //      .schema(customSchema)
-      .load("data/mllib/resigned.csv")
+      .load("data_past.csv")
       .select("EMP No","Gender","DOJ","Contract/Permanent","Reporting Line",
         "AHT","Attendance","Quality","CSAT","DSAT", "January","February","March",
         "April","May","June","July","August", "September","October","November","December")
