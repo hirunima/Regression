@@ -30,7 +30,7 @@ object LinearSVC {
     val dataset_working = spark.read.format("csv")
       .option("inferSchema", "true")
       .option("header", "true")
-      .load("data/mllib/working.csv")
+      .load("data_current.csv")
       .select("EMP No","Gender","DOJ","Contract/Permanent","Reporting Line",
         "AHT","Attendance","Quality","CSAT","DSAT", "January","February","March",
         "April","May","June","July","August", "September","October","November","December")
@@ -39,7 +39,7 @@ object LinearSVC {
     val dataset_resign = spark.read.format("csv")
       .option("inferSchema", "true")
       .option("header", "true")
-      .load("data/mllib/resigned.csv")
+      .load("data_past.csv")
       .select("EMP No","Gender","DOJ","Contract/Permanent","Reporting Line",
         "AHT","Attendance","Quality","CSAT","DSAT", "January","February","March",
         "April","May","June","July","August", "September","October","November","December")
